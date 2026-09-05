@@ -59,7 +59,7 @@ Macro F1 stays flat across the whole range, so no weight is clearly best. The tr
 1. **Logistic Regression is the model to ship.** It has the smallest gap between its two class accuracies (72.2% real, 56.6% fake) and the highest weighted F1 of any single model.
 2. **The SVM is biased toward "real".** It misses two out of three deepfakes. A detector with that failure mode has little practical value regardless of its headline score.
 3. **The ensemble does not beat LR.** Both LORIS variants inherit some of the SVM's bias without gaining anything net.
-4. **Per-class evaluation is not optional.** Overall accuracy barely moves across the entire sweep (0.641 to 0.645 macro F1) while the model's behaviour changes completely underneath it — real accuracy falls 15 points and fake accuracy rises 14.
+
 
 ---
 
