@@ -32,8 +32,6 @@ The third is named `validation` by the dataset, but nothing is tuned on it, so i
 
 The SVM has the highest real-audio accuracy of any model and the second-lowest on fake audio. It has learned to answer "human" — free accuracy on real clips, near-total failure on the class the system exists to catch. Random Forest sits at chance level.
 
-5-fold CV on the training split gives SVM 0.9898 and LR 0.9099 — against 0.64 for both on this test split. That ~35-point gap is far larger than ordinary generalization loss and suggests the testing split already differs in distribution from training.
-
 ### Ensemble weight sweep
 
 Soft voting is a weighted average of the two models' probabilities, so there is one knob:
