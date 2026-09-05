@@ -215,26 +215,6 @@ src/
 
 `data_preprocessing.py` builds the dataset on import, which is why inference imports `features.py` instead — otherwise classifying one clip would extract 15,000 files.
 
----
-
-## Known Limitations
-
-- **CV and test accuracy disagree sharply** — 99%/91% versus 64%/64%. The testing split appears to differ in distribution from training, before the re-recorded set is even introduced.
-- **Ensemble weights are not chosen by validation.** They are fixed constants in `config.py`. FoR ships an unused `for-2sec/.../validation` split (2,826 clips) that would be the correct place to select them.
-- **No temporal modelling.** Collapsing to mean and standard deviation discards all sequential structure — the ceiling on this approach.
-- **The CNN baseline was never run.** The notebook contains an unexecuted PyTorch implementation.
-- **Two pending deprecations.** `LogisticRegression(penalty=)` and `SVC(probability=True)`; see Installation.
-
-### Fixed relative to the original notebook
-
-- The `StandardScaler` was never saved, so a pickled model could not predict on its own — it now lives inside the `Pipeline`.
-- The scaler was fitted before cross-validation, leaking fold statistics into scaling.
-- Three near-identical feature functions collapsed into one.
-- Column names were interleaved while values were emitted in block order, so labels did not describe the values beneath them.
-- The re-recorded evaluation re-extracted features 12 times over the same 2,244 files.
-- Google Drive paths replaced with a configurable data root.
-
----
 
 ## Reference
 
