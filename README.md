@@ -404,17 +404,5 @@ The ensemble construction code was **missing** from the original notebook — `l
 - The re-recorded evaluation ran 12 loops over the same 2,244 files (~27,000 extractions where 2,244 suffice). Features are now extracted once and reused across models.
 - All Google Drive paths are gone; the data root is configurable.
 
----
-
-## Citation
-
-```bibtex
-@misc{bhavsar2026deepfake,
-  title  = {Deepfake Audio Detection with Statistical Classifiers},
-  author = {Bhavsar, Aryan Alpesh and Anand, Apurv and Rathore, Rahul Kumar},
-  year   = {2026},
-  note   = {Indian Institute of Technology Indore}
-}
-```
 
 **Dataset:** [The Fake-or-Real Dataset](https://www.kaggle.com/datasets/mohammedabdeldayem/the-fake-or-real-dataset) (Kaggle)
