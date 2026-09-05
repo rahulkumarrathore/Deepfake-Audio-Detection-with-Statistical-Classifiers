@@ -1,0 +1,22 @@
+# Virtual environment
+.venv/
+venv/
+
+# Dataset -- never commit (the FoR dataset is ~19 GB).
+# `data` may be a real directory or a symlink to one elsewhere.
+data
+data/
+data_demo/
+
+# Trained models (regenerate with: python -m src.train)
+artifacts/models/*.joblib
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
